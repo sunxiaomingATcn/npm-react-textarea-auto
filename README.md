@@ -5,6 +5,11 @@
 
 高度自动撑开文本域
 
+#### Install
+```javascript
+npm i react-textarea-auto
+```
+
 #### 代码
 ```javascript
 import AutoTextArea from 'react-textarea-auto'
