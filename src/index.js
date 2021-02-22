@@ -10,11 +10,20 @@ class AutoTextarea extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            value: ''
+            value: undefined
         }
     }
 
-    onKeyUp (ev){
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.value !== prevState.initValue) {
+            return {
+                value: nextProps.value
+            }
+        }
+        return null;
+    }
+
+    onKeyUp(ev) {
         const { onChange } = this.props;
         onChange && onChange(ev.target.value);
         this.setState({ value: ev.target.value })
@@ -22,9 +31,9 @@ class AutoTextarea extends React.Component {
 
     render() {
         const { value } = this.state;
-        const { placeholder = '请输入', maxLength = 3000, value: initValue = '', onChange } = this.props;
+        const { placeholder = '请输入', maxLength = 3000 } = this.props;
         return <div
-        className="autoTextarea"
+            className="autoTextarea"
         >
             <pre>
                 <span>{value}</span>
