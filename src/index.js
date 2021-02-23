@@ -45,6 +45,7 @@ class AutoTextarea extends React.Component {
                 onChange={this.onKeyUp.bind(this)}
                 onKeyUp={this.onKeyUp.bind(this)}
                 maxLength={maxLength}
+                {...this.props}
             ></textarea>
         </div>
     }
