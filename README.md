@@ -5,20 +5,16 @@
 
 高度自动撑开文本域
 
-#### Install
-```javascript
-npm i react-textarea-auto
-```
-
 #### 代码
 ```javascript
 import AutoTextArea from 'react-textarea-auto'
 <AutoTextArea maxLength={300} />
-
-/**
- * params maxLength: 默认3000
- * params placeholder: 默认'请输入'
- * params value: 初始值
- * params onChange
-*/
 ```
+
+#### Props
+|Name|Type|Default|Description|
+|----|----|-------|-----------|
+| **maxLength** | <code>Number</code> | 3000 | |
+| **placeholder** | <code>String</code> | 请输入 | |
+| **value** | <code>Number</code> |  |  |
+| **onChange** | <code>Boolean</code> | |  |
